@@ -27,7 +27,7 @@ mul x20, x19, x19
 mov x21, #2
 mov x22, #1
 madd x23, x21, x19, x22
-mull x24, x23, x20
+mul x24, x23, x20
 
 
 ldr x0, =output
