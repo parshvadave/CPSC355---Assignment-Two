@@ -7,8 +7,9 @@ output: .string "%ld\n"
 n: .skip 8
 
 
-.balign 4
-
+.text
+.extern scanf
+.extern printf
 .global main
 
 main: stp x29, x30, [sp, #-16]!
