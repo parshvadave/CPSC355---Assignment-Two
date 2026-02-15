@@ -1,31 +1,34 @@
+.data
+input: .string"%ld"
+output: .string "%ld\n"
+
+.bss
+.balign 8
+n: .skip 8
+
+
 .balign 4
-output: .string "%d"
 
 .global main
-
-
 
 main: stp x29, x30, [sp, #-16]!
 mov x29, sp
 
+ldr x0, =input
+ldr x1, =n
+bl scanf
 
-mov x19, #2
-mov x20, #3
-mov x21, #5
-mov x22, #7
-mov x23, #4
-
-mul x0, x19, x23, x23
-mul x0, x0, x23
-mneg x1, x20, x23, x23
-mul x2, x21, x23
+ldr x14, =n
+ldr x19, [x14] //--> value for n
 
 
-add x0, x0, x1
-add x0, x0, x2
-add x0, x0, x22
+add x20, x19, 1 // x20 = n + 1
+add x21, x19, 2// x21 = n + 2
+mul x22, x21, x20 // x22 = (n+2) * (n + 1)
+mul x23, x22, x19 // x23 = n * ((n + 2) * (n + 1))
 
 ldr x0, =output
+mov x1, x23
 bl printf
 
 
