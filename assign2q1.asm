@@ -1,5 +1,5 @@
 .data
-input: .string"%ld"
+input: .string "%ld"
 output: .string "%ld\n"
 
 .bss
