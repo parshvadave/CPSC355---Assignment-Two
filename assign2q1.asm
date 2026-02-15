@@ -23,8 +23,8 @@ ldr x14, =n
 ldr x19, [x14] //--> value for n
 
 
-add x20, x19, 1 // x20 = n + 1
-add x21, x19, 2// x21 = n + 2
+add x20, x19, #1 // x20 = n + 1
+add x21, x19, #2// x21 = n + 2
 mul x22, x21, x20 // x22 = (n+2) * (n + 1)
 mul x23, x22, x19 // x23 = n * ((n + 2) * (n + 1))
 
