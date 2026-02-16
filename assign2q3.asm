@@ -1,3 +1,9 @@
+//CPSC355: Assignment 2 - Question 3
+//By: Parshva Dave
+//UCID: 30251027
+//Date: February 15th, 2026
+
+
 .data
 input_number_1: .string "%ld"
 input_number_2: .string "%ld"
@@ -23,6 +29,8 @@ number_3: .skip 8
 main:
 stp x29, x30, [sp, #-16]!
 mov x29, sp
+
+
 
 
 ldr x0, =input_number_1

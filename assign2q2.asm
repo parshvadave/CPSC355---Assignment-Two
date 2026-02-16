@@ -1,3 +1,9 @@
+//CPSC355: Assignment 2 - Question 2
+//By: Parshva Dave
+//UCID: 30251027
+//Date: February 14th, 2026
+
+
 .data
 input_number: .string "%ld"
 output_sum: .string "%ld\n"
